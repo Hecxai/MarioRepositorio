@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de inicio</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #530000;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="color: white;">
+                <i class="bi bi-building"></i> Universidad de la Sierra Sur
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" style="color: white;"><i
+                                class="bi bi-house-door"></i>
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#clubes" style="color: white;"><i class="bi bi-collection"></i>
+                            Clubes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inscritos.html" style="color: white;"><i class="bi bi-collection"></i>
+                            Inscritos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto" style="color: white;"><i class="bi bi-envelope"></i>
+                            Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="src/img/unsis.png" class="d-block w-100" alt="Ritmos Latinos">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Unsis Clubs</h2>
+                    <p>Inscribete a uno de los clubs</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="src/img/gimanasio.jpeg" class="d-block w-100" alt="Gimnasio">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Gimnasio Universitario</h2>
+                    <p>Mejora tu salud y condición física con nuestros programas personalizados.</p>
+                    <a href="#gimnasio" class="btn btn-primary btn-lg">Más información</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="src/img/danzafor.jpeg" class="d-block w-100" alt="Danza Folclórica">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Danza Folclórica</h2>
+                    <p>Preserva nuestras tradiciones a través de la danza y la música tradicional.</p>
+                    <a href="#danza-folclorica" class="btn btn-primary btn-lg">Más información</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Sección de Clubes -->
+    <section id="clubes" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2><i class="bi bi-star-fill"></i> Nuestros Clubes</h2>
+                <p class="lead">Conoce las actividades</p>
+            </div>
+
+            <div class="row">
+                <!-- Card Ritmos Latinos -->
+                <div class="col-md-4" id="ritmos-latinos">
+                    <div class="card club-card" onclick="redirectToForm('ritmos-latinos')">
+                        <img src="src/img/ritmos.jpeg" class="card-img-top club-img" alt="Ritmos Latinos">
+                        <div class="card-body">
+                            <h5 class="card-title">Ritmos Latinos</h5>
+                            <p class="card-text">Aprende salsa, bachata, merengue y más con nuestros instructores
+                                profesionales.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="bi bi-calendar-week"></i> Lunes y Miércoles
+                                    16:00-18:00</li>
+                                <li class="list-group-item"><i class="bi bi-geo-alt"></i> Salón de Danza 3</li>
+                            </ul>
+                            <button class="btn btn-primary">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Gimnasio -->
+                <div class="col-md-4" id="gimnasio">
+                    <div class="card club-card" onclick="redirectToForm('gimnasio')">
+                        <img src="src/img/gym.jpeg" class="card-img-top club-img" alt="Gimnasio">
+                        <div class="card-body">
+                            <h5 class="card-title">Gimnasio</h5>
+                            <p class="card-text">Acceso a equipos de última generación y entrenadores certificados.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="bi bi-calendar-week"></i> Martes a Viernes
+                                    7:00-21:00</li>
+                                <li class="list-group-item"><i class="bi bi-geo-alt"></i> Edificio de Deportes</li>
+                            </ul>
+                            <button class="btn btn-primary">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Danza Folclórica -->
+                <div class="col-md-4" id="danza-folclorica">
+                    <div class="card club-card" onclick="redirectToForm('danza-folclorica')">
+                        <img src="src/img/danzafor.jpeg" class="card-img-top club-img" alt="Danza Folclórica">
+                        <div class="card-body">
+                            <h5 class="card-title">Danza Folclórica</h5>
+                            <p class="card-text">Preserva las tradiciones culturales a través de la danza tradicional
+                                mexicana.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><i class="bi bi-calendar-week"></i> Jueves y Sábado
+                                    15:00-17:00</li>
+                                <li class="list-group-item"><i class="bi bi-geo-alt"></i> Salón Cultural 2</li>
+                            </ul>
+                            <button class="btn btn-primary">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Universidad de la Sierra Sur</h5>
+                    <p><i class="bi bi-geo-alt"></i> Guillermo Rojas Mijangos s/n, Cd Universitaria, 70800 Miahuatlán de
+                        Porfirio Díaz, Oax.</p>
+                    <p><i class="bi bi-telephone"></i> 951 572 4100</p>
+                    <p><i class="bi bi-envelope"></i> serves@unsis.edu.mx</p>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Horario de atención</h5>
+                    <ul class="list-unstyled">
+                        <li>Lunes a Viernes: 9:00 - 18:00</li>
+                        <li>Sábado: Cerrado</li>
+                        <li>Domingo: Cerrado</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr class="mt-4 mb-3" style="border-color: rgba(255,255,255,0.1);">
+
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Universidad de la Sierra Sur. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/app.js"></script>
+    
+</body>
+
+</html>
+
